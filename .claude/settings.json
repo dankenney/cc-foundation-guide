@@ -1,0 +1,18 @@
+{
+  "env": {
+    "ENABLE_TOOL_SEARCH": "true"
+  },
+  "permissions": {
+    "allow": [
+      "Read(*)",
+      "Bash(ls *)",
+      "Bash(cat *)",
+      "Bash(cd *)",
+      "Bash(mv *)",
+      "Bash(cp *)",
+      "Bash(open *)",
+      "Bash(git *)",
+      "WebFetch(domain:*)"
+    ]
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "name": "cc-foundation-guide",
+  "description": "Comprehensive reference for building with AI coding agents — project setup, context management, model strategy, and quality workflows",
+  "status": "ideating",
+  "created_date": "2026-02-19",
+  "last_updated": "2026-02-19",
+  "hours": {
+    "manual_estimate": 0,
+    "ai_assisted_actual": 0,
+    "sessions_count": 0
+  },
+  "skills_used": [],
+  "tools_used": [],
+  "plugins_used": [],
+  "lessons_learned": [],
+  "tech_stack": ["bash", "markdown"],
+  "github_url": "",
+  "live_url": "",
+  "tags": []
+}
