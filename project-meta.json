@@ -1,20 +1,38 @@
 {
   "name": "cc-foundation-guide",
-  "description": "Comprehensive reference for building with AI coding agents — project setup, context management, model strategy, and quality workflows",
-  "status": "ideating",
+  "public_name": "AI Coding Agent Foundation Guide",
+  "description": "Comprehensive reference for building with AI coding agents - project setup, context management, model strategy, and quality workflows",
+  "status": "in-development",
   "created_date": "2026-02-19",
   "last_updated": "2026-02-19",
   "hours": {
-    "manual_estimate": 0,
-    "ai_assisted_actual": 0,
-    "sessions_count": 0
+    "manual_estimate": 8,
+    "ai_assisted_actual": 1.5,
+    "sessions_count": 2
   },
   "skills_used": [],
-  "tools_used": [],
+  "tools_used": [
+    "claude-code",
+    "git-bash",
+    "openai-codex",
+    "notion-mcp"
+  ],
   "plugins_used": [],
-  "lessons_learned": [],
-  "tech_stack": ["bash", "markdown"],
+  "lessons_learned": [
+    "bash set -u (nounset) causes issues with associative arrays in Git Bash - use set -eo pipefail instead",
+    "Notion publishing is page-level; inline databases may need to be opened as full pages for direct public URLs",
+    "Store external integration IDs in a tracked project file to make automation repeatable across sessions"
+  ],
+  "tech_stack": [
+    "bash",
+    "markdown"
+  ],
   "github_url": "",
   "live_url": "",
-  "tags": []
+  "tags": [
+    "meta",
+    "workflow",
+    "productivity",
+    "notion"
+  ]
 }
