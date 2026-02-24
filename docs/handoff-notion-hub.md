@@ -9,11 +9,11 @@
 
 ### Infrastructure
 1. **Init script** (`~/scripts/init-project.sh`) — Working. Creates full Foundation Package for new projects.
-2. **Project scanner** (`~/scripts/scan-projects.sh`) — Working. Scans `~/projects/*/project-meta.json` and prints health summary. All 8 projects visible.
+2. **Project scanner** (`~/scripts/scan-projects.sh`) — Working. Scans `~/projects/*/project-meta.json` and prints health summary. All 9 projects visible.
 
 ### Notion Hub (Complete)
 3. **Dan's Lab landing page** — Created and published at `https://dankenney.notion.site/Dan-s-Lab-30cc67a2483a8139abcbd1f6ee13a146`
-4. **Project Lab** database — 8 projects with anonymized public names, status, hours saved, skills used, lessons learned. Data source: `063f903c-6ec1-4431-92ea-66487e515b8b`
+4. **Project Lab** database — 9 projects with anonymized public names, status, hours saved, skills used, lessons learned. Data source: `063f903c-6ec1-4431-92ea-66487e515b8b`
 5. **Resources** database — 7 entries (Stulberg, Cherny, Anthropic docs, Everything CC, HumanLayer, Karpathy skills, Shankar). Data source: `3677debd-77b7-4949-9277-caed00f9517f`
 6. **Skills Catalog** database — 11 entries (commands, skills, MCPs, hooks). Data source: `65821b67-54d2-4683-af6f-0ef7643d92fb`
 7. **Getting Started Guides** database — 12 entries (templates, commands, config, guides, references). Data source: `a289eafb-47b8-458f-9c9d-ffa62db0e5be`
@@ -63,3 +63,4 @@ See `docs/notion-hub-config.md` for the complete registry of Notion IDs, data so
 | IPO | IPO ESG Mining Pipeline |
 | x-bookmarks-kb | X Bookmarks Knowledge Base |
 | Approve bot | Claude Code Auto-Approver |
+| roi-tool | Sustainability ROI Calculator |

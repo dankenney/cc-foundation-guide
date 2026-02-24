@@ -4,11 +4,11 @@
   "description": "Comprehensive reference for building with AI coding agents - project setup, context management, model strategy, and quality workflows",
   "status": "in-development",
   "created_date": "2026-02-19",
-  "last_updated": "2026-02-19",
+  "last_updated": "2026-02-24",
   "hours": {
-    "manual_estimate": 8,
-    "ai_assisted_actual": 1.5,
-    "sessions_count": 2
+    "manual_estimate": 10,
+    "ai_assisted_actual": 2,
+    "sessions_count": 3
   },
   "skills_used": [],
   "tools_used": [
@@ -21,7 +21,9 @@
   "lessons_learned": [
     "bash set -u (nounset) causes issues with associative arrays in Git Bash - use set -eo pipefail instead",
     "Notion publishing is page-level; inline databases may need to be opened as full pages for direct public URLs",
-    "Store external integration IDs in a tracked project file to make automation repeatable across sessions"
+    "Store external integration IDs in a tracked project file to make automation repeatable across sessions",
+    "Global commands (~/.claude/commands/) are available in all projects; project-level commands are project-only. Move universal commands global after verifying they work.",
+    "Retrofitting Foundation Package onto existing projects works well — backfill from git history and existing docs rather than starting from scratch"
   ],
   "tech_stack": [
     "bash",

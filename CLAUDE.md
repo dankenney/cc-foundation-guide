@@ -44,10 +44,10 @@ The guide defines the Foundation Package structure. The init script implements i
 - Prompts are copy-paste ready (fenced code blocks)
 
 ## Current Status
-**Phase:** Active - v2.0
-**In progress:** Define personal site implementation scope and deployment plan.
+**Phase:** Active - v2.1
+**In progress:** Personal site implementation scope and deployment plan.
 **Next:** Implement Step 4: build and deploy the simple personal site linked to Dan's Lab.
-**Completed:** Foundation Package structure, init script, project scanner, Notion hub databases, Dan's Lab landing page, and `/wrap-up` Notion sync automation.
+**Completed:** Foundation Package structure, init script, project scanner, Notion hub databases, Dan's Lab landing page, `/wrap-up` Notion sync automation, v2.1 guide update (retrofitting, corporate gotchas, command scope).
 
 ## Gotchas
 - The init script uses `date -d` which may behave differently on macOS vs Linux vs Git Bash

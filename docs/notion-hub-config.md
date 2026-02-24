@@ -19,6 +19,7 @@ This file is the source of truth for Notion IDs and URLs used by this project.
 | Project Lab | c15c5d12-00d0-4cab-95c1-f2c877c7bd40 | https://www.notion.so/c15c5d1200d04cab95c1f2c877c7bd40 | pending publish | created | Data source: 063f903c-6ec1-4431-92ea-66487e515b8b |
 | Resources | f2ebfaa7-2c5d-4e30-bc14-0b06ccca1f9a | https://www.notion.so/f2ebfaa72c5d4e30bc140b06ccca1f9a | pending publish | created | Data source: 3677debd-77b7-4949-9277-caed00f9517f |
 | Skills Catalog | b0e71b40-3b5c-4559-ac99-fcd8d55418a0 | https://www.notion.so/b0e71b403b5c4559ac99fcd8d55418a0 | pending publish | created | Data source: 65821b67-54d2-4683-af6f-0ef7643d92fb |
+| Weekly Picks | 8bf4b809-c85f-47a5-95af-e2392a9ab4e3 | https://www.notion.so/8bf4b809c85f47a595afe2392a9ab4e3 | pending publish | created | Data source: 1936fbd5-5e37-484b-82d3-4d518bd695ae |
 | Dan's Lab Landing Page | 30cc67a2-483a-8139-abcb-d1f6ee13a146 | https://www.notion.so/30cc67a2483a8139abcbd1f6ee13a146 | https://dankenney.notion.site/Dan-s-Lab-30cc67a2483a8139abcbd1f6ee13a146 | created | Parent page for all databases |
 
 ## Project Lab Schema
@@ -34,7 +35,7 @@ This file is the source of truth for Notion IDs and URLs used by this project.
 
 ## Verification Checklist
 - [x] Notion search via MCP returns results
-- [x] All 3 databases are created with required fields
+- [x] All 5 databases are created with required fields
 - [x] Landing page is created and embeds all database views
 - [x] Project Lab is seeded with `cc-foundation-guide` from `project-meta.json`
 - [x] Internal Notion URLs are captured above

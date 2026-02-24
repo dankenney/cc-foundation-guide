@@ -2,8 +2,8 @@
 
 ### A Practical Operating System for Building with AI Coding Agents
 
-> **Last updated:** 2026-02-15  
-> **Version:** 2.0  
+> **Last updated:** 2026-02-24
+> **Version:** 2.1  
 > **Purpose:** A comprehensive, shareable reference for starting projects, managing context, choosing models, and maintaining quality when building with Claude Code (CC), OpenAI Codex, and related AI coding agents.  
 > **Audience:** Anyone using AI coding agents — from first project to advanced workflows.  
 > **This guide is itself a project.** Give it the foundation package at `~/projects/cc-foundation-guide/` and keep it alive.
@@ -18,7 +18,7 @@
 3. [The Foundation Package: What Every Project Needs](#3-the-foundation-package)
 4. [CLAUDE.md vs AGENTS.md — When & Why](#4-claudemd-vs-agentsmd)
 5. [Skills & Plugins Strategy](#5-skills--plugins-strategy)
-6. [The Init Script: Automating Project Kickoff](#6-the-init-script)
+6. [The Init Script: Automating Project Kickoff](#6-the-init-script) *(includes: Retrofitting Existing Projects, Global vs Project-Level Commands)*
 7. [Project Tracker: Documenting What You Build](#7-project-tracker)
 8. [CC Prompts: Copy-Paste Starters](#8-cc-prompts)
 9. [Key Learnings from Research & Practice](#9-key-learnings)
@@ -539,9 +539,14 @@ Review what we accomplished in this session. Update the following files:
 
 5. CLAUDE.md — update the Current Status section to reflect where we are.
 
-Write all entries in a direct, analytical tone — like a senior consultant 
-documenting outcomes for a stakeholder who needs to understand what happened 
+Write all entries in a direct, analytical tone — like a senior consultant
+documenting outcomes for a stakeholder who needs to understand what happened
 and why it matters.
+
+Note: This is the base /wrap-up command. If you later set up a Notion hub
+(see website-notion-guide.md), the /wrap-up command is upgraded to include
+a Part 2 that syncs project status to Notion after updating local files.
+The /setup-notion-hub command handles this upgrade automatically.
 
 The /status command (.claude/commands/status.md) should contain:
 ---
@@ -556,6 +561,55 @@ Read project-meta.json and CLAUDE.md. Provide a brief status report:
 
 Make the script executable and test it by creating a sample project.
 ```
+
+### Retrofitting Existing Projects
+
+Not every project starts with `init-project.sh`. If you have an existing project that predates the Foundation Package, you can retrofit it. **\*** *This happened with the ROI tool — built over 5 sessions before the foundation guide existed. Retrofitting took one session and immediately improved cross-tool context.*
+
+**CC Prompt to Retrofit:**
+
+```
+This is an existing project that doesn't have Foundation Package scaffolding.
+Read through the codebase (README, docs, configs) and create the missing
+foundation files:
+
+1. CLAUDE.md — Project brief based on what you see in the code
+2. AGENTS.md — Mirror for Codex/Cursor compatibility
+3. project-meta.json — Backfill metadata from git history
+4. .claude/commands/wrap-up.md and status.md
+5. docs/decisions.md — Backfill key decisions from commit history and code
+6. docs/changelog.md — Backfill from git log
+7. docs/FORDAN.md — Write learning narrative from what's in the codebase
+
+For decisions.md and changelog.md, use git log and existing docs to
+reconstruct history. Don't invent dates — use what's available.
+```
+
+**Key differences from a fresh init:**
+- You're *inferring* context from existing code, not defining it from scratch
+- Backfilling `project-meta.json` requires estimating hours and session counts
+- Existing docs (README, runbooks) should be referenced in CLAUDE.md, not duplicated
+- The `docs/` directory may already exist with other files — add foundation files alongside them
+
+### Global vs Project-Level Commands
+
+Commands in `.claude/commands/` are only available when CC is running inside that project directory. This is a common gotcha — you create `/wrap-up` in one project and wonder why it doesn't appear in another.
+
+**To make a command available in ALL projects**, put it in:
+
+```
+~/.claude/commands/wrap-up.md    ← Available everywhere
+```
+
+**Project-level commands** stay in:
+
+```
+~/projects/my-app/.claude/commands/wrap-up.md    ← Only in this project
+```
+
+**Recommendation:** Keep `/wrap-up` and `/status` **global** (in `~/.claude/commands/`) since they work the same everywhere. Keep project-specific commands (like `/setup-notion-hub`) at the project level.
+
+The init script creates commands at the project level by default. After you've verified they work, move the universally useful ones to `~/.claude/commands/`.
 
 ---
 
@@ -766,6 +820,16 @@ lessons_learned entries would be useful to add to the foundation guide.
 - Don't @-mention doc files in CLAUDE.md (bloats context). Instead, tell CC when and why to read them (Shrivu Shankar)
 - Use Opus for planning, Sonnet for execution (`/model` command) — separate strategic from operational
 - Periodically trim CLAUDE.md: if content is about finished projects or outdated decisions, cut it
+
+### From Deployment & Corporate Environments
+
+Hard-won lessons from deploying AI-built apps to corporate networks. **\*** *Every one of these caused real production issues.*
+
+- **Corporate firewalls silently block tunnels.** Cloudflare tunnels, ngrok, and similar tools may work on personal machines but fail silently on corporate networks. Use managed hosting (Vercel, Netlify) for anything testers on corporate machines need to reach.
+- **Never throttle auth by IP on corporate networks.** Shared IP addresses mean one person's failed password locks out the entire office. Scope rate limiting to a browser-generated client ID cookie instead.
+- **Nested subdomains need Advanced TLS Certificates.** `app.api.domain.com` won't work with standard wildcard certs (`*.domain.com`). Cloudflare needs an Advanced Certificate covering `*.subdomain.domain.com`. Set this up proactively.
+- **Serverless `/tmp` is ephemeral.** On Vercel, Lambda, etc., any data written to `/tmp` vanishes on cold starts. Use proper storage (Vercel Blob, S3, database) for anything you need to persist.
+- **Test on corporate machines early.** Don't wait for UAT to discover that your app doesn't work behind a corporate proxy. Get access to the target environment as early as possible.
 
 ### From Your X Bookmarks (Actionable Additions)
 
