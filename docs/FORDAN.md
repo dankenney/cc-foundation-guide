@@ -30,8 +30,19 @@ The recent milestone added Notion hub wiring (OAuth + databases + landing page +
 - This terminal did not have the `claude` CLI available, so Notion creation had to be executed inside a Claude Code session.
 - Notion publish controls are page-level. Inline or linked databases may not expose a separate publish action until opened as full pages.
 
+## Session 4: The Getting-Started Guide (2026-03-03)
+
+The foundation guide was built for you — someone already deep in the workflow. When a friend asked "how do I get started with Claude Code?", the honest answer was: the guide is too much. It's a reference manual, not an onboarding path.
+
+So we built what was missing: `getting-started.md`. Four progressive stages that take someone from "I just installed this" to "I'm running parallel agents in worktrees." The key insight was structure — not simplification. The full guide has all the content; what beginners need is *sequencing*. Stage 1 covers install and first habits. Stage 2 introduces CLAUDE.md and project memory. Stage 3 adds the Foundation Package and automation. Stage 4 covers the advanced stuff (hooks, MCP, skills) that only matters once everything else is muscle memory.
+
+The opinionated voice matters here. Every "start simple" guide that hedges with "you could also..." loses the reader. This one picks a path and says "do this." The cross-references to the full guide are there when someone wants the why, but the getting-started doc stands alone.
+
+Also ran the weekly bookmark digest this session — processed 44 new X bookmarks, surfaced 7 personalized picks, and pushed them to Notion. The digest pipeline is becoming a genuine weekly habit now, which is exactly what it was designed for.
+
 ## What Transfers to Future Projects
 
 - Convert manual external setup into a project command early (`/setup-notion-hub`) so the workflow is repeatable.
 - Keep integration IDs in a dedicated tracked file, not only in chat memory.
 - Treat functional completion and polish separately: get integration working first, then add public-facing refinements.
+- Comprehensive references need a progressive companion. Build the deep guide first, then extract a getting-started path from it — not the other way around.

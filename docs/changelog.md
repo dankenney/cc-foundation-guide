@@ -1,5 +1,14 @@
 # Changelog
 
+## 2026-03-03 - Getting Started Guide + Bookmark Digest Pipeline
+
+- Created `getting-started.md` — a standalone, progressive onboarding guide for new Claude Code users (357 lines, 4 stages: First Hour, First Week, First Month, Going Further)
+- Guide includes copy-paste prompts, model strategy, Foundation Package overview, init script usage, and a quick reference card
+- Written in opinionated voice with personal experience tips, designed to be shareable without requiring the full foundation guide
+- Committed, pushed to master, and shared via GitHub URL
+- Cross-session: processed weekly X/Twitter bookmark digest in x-bookmarks-kb — 18 new KB entries, 7 personalized picks pushed to Notion
+- Context: Friend needed Claude Code onboarding; the full foundation guide was too dense for a first-timer. This fills the "quick start" gap the project was missing.
+
 ## 2026-02-24 - Guide v2.1: Retrofitting, Corporate Gotchas, Command Scope
 - Added "Retrofitting Existing Projects" subsection to Section 6 — documents how to add Foundation Package to projects that predate the guide
 - Added "Global vs Project-Level Commands" subsection — explains `~/.claude/commands/` (global) vs project-level scope, addresses the "why isn't /wrap-up showing up?" problem

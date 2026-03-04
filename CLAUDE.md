@@ -45,9 +45,9 @@ The guide defines the Foundation Package structure. The init script implements i
 
 ## Current Status
 **Phase:** Active - v2.1
-**In progress:** Personal site implementation scope and deployment plan.
-**Next:** Implement Step 4: build and deploy the simple personal site linked to Dan's Lab.
-**Completed:** Foundation Package structure, init script, project scanner, Notion hub databases, Dan's Lab landing page, `/wrap-up` Notion sync automation, v2.1 guide update (retrofitting, corporate gotchas, command scope).
+**In progress:** Guide maintenance and iteration based on user feedback.
+**Next:** Review getting-started.md after friend's first session; incorporate feedback.
+**Completed:** Foundation Package structure, init script, project scanner, Notion hub databases, Dan's Lab landing page, `/wrap-up` Notion sync automation, v2.1 guide update (retrofitting, corporate gotchas, command scope), getting-started.md onboarding guide for new CC users, personal site (besaltlabs.ai) built and deployed.
 
 ## Gotchas
 - The init script uses `date -d` which may behave differently on macOS vs Linux vs Git Bash

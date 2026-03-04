@@ -1,16 +1,20 @@
 {
   "name": "cc-foundation-guide",
   "public_name": "AI Coding Agent Foundation Guide",
-  "description": "Comprehensive reference for building with AI coding agents - project setup, context management, model strategy, and quality workflows",
+  "description": "Comprehensive reference for building with AI coding agents - project setup, context management, model strategy, and quality workflows. Includes getting-started guide for new users.",
   "status": "in-development",
   "created_date": "2026-02-19",
-  "last_updated": "2026-02-24",
+  "last_updated": "2026-03-03",
   "hours": {
-    "manual_estimate": 10,
-    "ai_assisted_actual": 2,
-    "sessions_count": 3
+    "manual_estimate": 14,
+    "ai_assisted_actual": 3,
+    "sessions_count": 4
   },
-  "skills_used": [],
+  "skills_used": [
+    "digest",
+    "wrap-up",
+    "push-to-notion"
+  ],
   "tools_used": [
     "claude-code",
     "git-bash",
@@ -23,7 +27,8 @@
     "Notion publishing is page-level; inline databases may need to be opened as full pages for direct public URLs",
     "Store external integration IDs in a tracked project file to make automation repeatable across sessions",
     "Global commands (~/.claude/commands/) are available in all projects; project-level commands are project-only. Move universal commands global after verifying they work.",
-    "Retrofitting Foundation Package onto existing projects works well — backfill from git history and existing docs rather than starting from scratch"
+    "Retrofitting Foundation Package onto existing projects works well — backfill from git history and existing docs rather than starting from scratch",
+    "Comprehensive guides need a progressive companion doc — the full reference is valuable but too dense for onboarding. A 4-stage getting-started guide fills the gap."
   ],
   "tech_stack": [
     "bash",
@@ -35,6 +40,7 @@
     "meta",
     "workflow",
     "productivity",
-    "notion"
+    "notion",
+    "onboarding"
   ]
 }
