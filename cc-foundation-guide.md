@@ -201,6 +201,8 @@ Claude Code is available in three forms. Each is best for different work:
 | Model             | **Opus Plan Mode** (auto-switches Opus↔Sonnet)        | See [Section 2](#2-model-strategy)                  |
 | Permissions       | Pre-allow safe bash commands, file reads, web fetches | Reduces permission prompts                          |
 
+> **Windows security note:** Do not enable WebDAV or allow CC to access UNC paths (`\\*`) that may contain WebDAV subdirectories. WebDAV has been deprecated by Microsoft due to security risks — UNC paths look like local file access but can silently resolve over the network. An agent with access to `\\*` paths could be tricked into triggering requests to remote hosts, bypassing CC's permission system entirely. This is essentially an exfiltration channel disguised as a file read. Stick to local paths (`C:\Users\...`) and use OneDrive/Dropbox sync clients rather than WebDAV mounts for cloud storage. See [Anthropic's docs](https://docs.anthropic.com/en/docs/claude-code/security) for details.
+
 ### Parallel Sessions & Subagents
 
 If you're running one CC session at a time doing things sequentially, you're underusing the tool. Here's what to layer in:
